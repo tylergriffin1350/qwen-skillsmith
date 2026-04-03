@@ -1,6 +1,6 @@
 {
   "name": "qwen-skillsmith",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Build consistent Qwen Code skills using standardized syntax and guided workflows",
   "bin": {
     "qwen-skillsmith": "bin/install.js"
