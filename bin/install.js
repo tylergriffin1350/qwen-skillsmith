@@ -52,15 +52,25 @@ function expandTilde(filePath) {
   return filePath;
 }
 
-function copyDir(srcDir, destDir, skipDirs = []) {
+/**
+ * Recursively copy directory, replacing ~/.qwen/ paths in .md files
+ */
+function copyDir(srcDir, destDir, pathPrefix, skipDirs = []) {
   fs.mkdirSync(destDir, { recursive: true });
   const entries = fs.readdirSync(srcDir, { withFileTypes: true });
   for (const entry of entries) {
     if (skipDirs.includes(entry.name)) continue;
     const srcPath = path.join(srcDir, entry.name);
     const destPath = path.join(destDir, entry.name);
-    if (entry.isDirectory()) copyDir(srcPath, destPath, skipDirs);
-    else fs.copyFileSync(srcPath, destPath);
+    if (entry.isDirectory()) {
+      copyDir(srcPath, destPath, pathPrefix, skipDirs);
+    } else if (entry.name.endsWith('.md')) {
+      let content = fs.readFileSync(srcPath, 'utf8');
+      content = content.replace(/~\/\.qwen\//g, pathPrefix);
+      fs.writeFileSync(destPath, content);
+    } else {
+      fs.copyFileSync(srcPath, destPath);
+    }
   }
 }
 
@@ -111,6 +121,9 @@ function install(isGlobal) {
   const qwenDir = isGlobal ? globalDir : path.join(process.cwd(), '.qwen');
   const smDest = path.join(qwenDir, 'commands', 'qwen-skillsmith');
 
+  // Path prefix for @-reference replacement in .md files
+  const pathPrefix = isGlobal ? '~/.qwen/' : './.qwen/';
+
   const locationLabel = isGlobal
     ? smDest.replace(os.homedir(), '~')
     : smDest.replace(process.cwd(), '.');
@@ -125,27 +138,34 @@ function install(isGlobal) {
 
   fs.mkdirSync(smDest, { recursive: true });
 
-  fs.copyFileSync(path.join(src, 'skillsmith', 'skillsmith.md'), path.join(smDest, 'skillsmith.md'));
+  // Copy entry point with path replacement
+  let smContent = fs.readFileSync(path.join(src, 'skillsmith', 'skillsmith.md'), 'utf8');
+  smContent = smContent.replace(/~\/\.qwen\//g, pathPrefix);
+  fs.writeFileSync(path.join(smDest, 'skillsmith.md'), smContent);
   console.log(`  ${green}+${reset} skillsmith.md ${dim}(meta-skill entry point)${reset}`);
 
+  // Copy tasks with path replacement
   const tasksSrc = path.join(src, 'skillsmith', 'tasks');
   const tasksDest = path.join(smDest, 'tasks');
-  copyDir(tasksSrc, tasksDest);
+  copyDir(tasksSrc, tasksDest, pathPrefix);
   console.log(`  ${green}+${reset} tasks/ ${dim}(${countFiles(tasksSrc, '.md')} task files)${reset}`);
 
+  // Copy rules with path replacement
   const rulesSrc = path.join(src, 'skillsmith', 'rules');
   const rulesDest = path.join(smDest, 'rules');
-  copyDir(rulesSrc, rulesDest);
+  copyDir(rulesSrc, rulesDest, pathPrefix);
   console.log(`  ${green}+${reset} rules/ ${dim}(${countFiles(rulesSrc, '.md')} rule files)${reset}`);
 
+  // Copy templates with path replacement
   const tplSrc = path.join(src, 'skillsmith', 'templates');
   const tplDest = path.join(smDest, 'templates');
-  copyDir(tplSrc, tplDest);
+  copyDir(tplSrc, tplDest, pathPrefix);
   console.log(`  ${green}+${reset} templates/ ${dim}(skill spec template)${reset}`);
 
+  // Copy specs with path replacement
   const specsSrc = path.join(src, 'specs');
   const specsDest = path.join(smDest, 'specs');
-  copyDir(specsSrc, specsDest);
+  copyDir(specsSrc, specsDest, pathPrefix);
   console.log(`  ${green}+${reset} specs/ ${dim}(${countFiles(specsSrc, '.md')} syntax specs)${reset}`);
 
   console.log(`
