@@ -1,0 +1,37 @@
+{
+  "name": "qwen-skillsmith",
+  "version": "1.0.0",
+  "description": "Build consistent Qwen Code skills using standardized syntax and guided workflows",
+  "bin": {
+    "qwen-skillsmith": "bin/install.js"
+  },
+  "files": [
+    "bin",
+    "skillsmith",
+    "specs",
+    "README.md"
+  ],
+  "keywords": [
+    "qwen",
+    "qwen-code",
+    "qwen-cli",
+    "ai",
+    "skills",
+    "skill-builder",
+    "skillsmith",
+    "standards"
+  ],
+  "author": "Chris Kahler (adapted for Qwen by tylergriffin1350)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tylergriffin1350/qwen-skillsmith.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tylergriffin1350/qwen-skillsmith/issues"
+  },
+  "homepage": "https://github.com/tylergriffin1350/qwen-skillsmith#readme",
+  "engines": {
+    "node": ">=16.7.0"
+  }
+}
