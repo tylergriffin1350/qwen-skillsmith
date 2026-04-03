@@ -1,5 +1,5 @@
 <purpose>
-Guided conversational interview that captures all design decisions needed to scaffold a new Claude Code skill. Produces a structured skill spec as output.
+Guided conversational interview that captures all design decisions needed to scaffold a new Qwen Code skill. Produces a structured skill spec as output.
 </purpose>
 
 <user-story>

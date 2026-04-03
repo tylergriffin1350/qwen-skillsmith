@@ -3,13 +3,13 @@ name: skillsmith
 type: suite
 version: 0.1.0
 category: development
-description: Build consistent Claude Code skills using standardized syntax and guided workflows
+description: Build consistent Qwen Code skills using standardized syntax and guided workflows
 allowed-tools: [Read, Write, Glob, Grep, Edit, AskUserQuestion, Bash]
 ---
 
 <activation>
 ## What
-Meta-skill for creating and maintaining Claude Code skills. Guides you through discovery (what to build), scaffolding (generating compliant files), distilling (chunking source material), and auditing (checking compliance) using standardized syntax specs.
+Meta-skill for creating and maintaining Qwen Code skills. Guides you through discovery (what to build), scaffolding (generating compliant files), distilling (chunking source material), and auditing (checking compliance) using standardized syntax specs.
 
 ## When to Use
 - Building a new skill from scratch
