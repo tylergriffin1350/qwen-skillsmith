@@ -163,8 +163,7 @@ Defines what auxiliary files to load and when. Replaces PAUL's `<execution_conte
 @context/business-profile.md
 
 ## Load on Command
-@{~/.qwen/commands/qwen-skillsmith/tasks/full-build.md} (when user runs /skill-name build)
-@{~/.qwen/commands/qwen-skillsmith/tasks/review.md} (when user runs /skill-name review)
+`tasks/{command}.md` — task file matching the command suffix (e.g., `/skill build` → `tasks/build.md`)
 
 ## Load on Demand
 @frameworks/hormozi-value-equation.md (when designing offers)
@@ -256,8 +255,7 @@ Content pipeline manager — organized, status-focused, action-oriented.
 @context/pipeline-status.md
 
 ## Load on Command
-@{~/.qwen/commands/qwen-skillsmith/tasks/generate-script.md} (when creating new scripts)
-@{~/.qwen/commands/qwen-skillsmith/tasks/update-status.md} (when moving content through stages)
+`tasks/{command}.md` — task file matching the command suffix
 </routing>
 
 <greeting>
