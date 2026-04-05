@@ -162,11 +162,11 @@ function install(isGlobal) {
   copyDir(tplSrc, tplDest, pathPrefix);
   console.log(`  ${green}+${reset} templates/ ${dim}(skill spec template)${reset}`);
 
-  // Copy specs with path replacement
+  // Copy specs to separate directory (matching original structure: .qwen/skillsmith-specs/)
   const specsSrc = path.join(src, 'specs');
-  const specsDest = path.join(smDest, 'specs');
+  const specsDest = path.join(qwenDir, 'skillsmith-specs');
   copyDir(specsSrc, specsDest, pathPrefix);
-  console.log(`  ${green}+${reset} specs/ ${dim}(${countFiles(specsSrc, '.md')} syntax specs)${reset}`);
+  console.log(`  ${green}+${reset} skillsmith-specs/ ${dim}(${countFiles(specsSrc, '.md')} syntax specs)${reset}`);
 
   console.log(`
   ${green}Done!${reset} Open Qwen Code and type ${cyan}/skillsmith${reset} to start.
