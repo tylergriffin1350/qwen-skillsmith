@@ -13,16 +13,16 @@ As a skill builder, I want a structured interview that walks me through every de
 </when-to-use>
 
 <context>
-@{~/.qwen/commands/qwen-skillsmith/specs/entry-point.md}
+@{~/.qwen/commands/skillsmith/specs/entry-point.md}
 </context>
 
 <references>
-@{~/.qwen/commands/qwen-skillsmith/specs/tasks.md} (when discussing task structure)
-@{~/.qwen/commands/qwen-skillsmith/specs/templates.md} (when discussing template structure)
-@{~/.qwen/commands/qwen-skillsmith/specs/frameworks.md} (when discussing framework structure)
-@{~/.qwen/commands/qwen-skillsmith/specs/context.md} (when discussing context structure)
-@{~/.qwen/commands/qwen-skillsmith/specs/checklists.md} (when discussing checklist structure)
-@{~/.qwen/commands/qwen-skillsmith/specs/rules.md} (when discussing rules — meta-skill only)
+@{~/.qwen/commands/skillsmith/specs/tasks.md} (when discussing task structure)
+@{~/.qwen/commands/skillsmith/specs/templates.md} (when discussing template structure)
+@{~/.qwen/commands/skillsmith/specs/frameworks.md} (when discussing framework structure)
+@{~/.qwen/commands/skillsmith/specs/context.md} (when discussing context structure)
+@{~/.qwen/commands/skillsmith/specs/checklists.md} (when discussing checklist structure)
+@{~/.qwen/commands/skillsmith/specs/rules.md} (when discussing rules — meta-skill only)
 </references>
 
 <steps>
@@ -108,7 +108,7 @@ Walk through each auxiliary folder type to determine what the skill needs.
 <step name="phase-5-review" label="Review & Confirm">
 Present the complete skill spec for final review.
 
-1. Generate the full skill spec using @{~/.qwen/commands/qwen-skillsmith/templates/skill-spec.md} format
+1. Generate the full skill spec using @{~/.qwen/commands/skillsmith/templates/skill-spec.md} format
 2. Display it to the user with all captured decisions filled in
 3. Ask: "Does this look right? Say **confirm** to finalize, or tell me what to change."
 

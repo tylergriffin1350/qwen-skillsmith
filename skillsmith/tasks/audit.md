@@ -14,8 +14,8 @@ As a skill builder, I want to audit existing skills against the syntax standards
 </when-to-use>
 
 <context>
-@{~/.qwen/commands/qwen-skillsmith/rules/entry-point-rules.md}
-@{~/.qwen/commands/qwen-skillsmith/rules/tasks-rules.md}
+@{~/.qwen/commands/skillsmith/rules/entry-point-rules.md}
+@{~/.qwen/commands/skillsmith/rules/tasks-rules.md}
 </context>
 
 <references>

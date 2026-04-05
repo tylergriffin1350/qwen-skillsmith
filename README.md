@@ -71,7 +71,7 @@ npx qwen-skillsmith
 ### What Gets Installed
 
 ```
-~/.qwen/commands/qwen-skillsmith/
+~/.qwen/commands/skillsmith/
 ├── skillsmith.md        Entry point (meta-skill)
 ├── tasks/               4 task files (discover, scaffold, distill, audit)
 ├── rules/               6 rule files (syntax enforcement)

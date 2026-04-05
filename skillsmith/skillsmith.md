@@ -55,19 +55,19 @@ Senior skill architect — designs skill structures, enforces conventions, and g
 Nothing — Skillsmith is lightweight until a command is invoked.
 
 ## Load on Command
-@{~/.qwen/commands/qwen-skillsmith/tasks/discover.md} (when user runs /skillsmith discover or starts discovery)
-@{~/.qwen/commands/qwen-skillsmith/tasks/scaffold.md} (when user runs /skillsmith scaffold)
-@{~/.qwen/commands/qwen-skillsmith/tasks/distill.md} (when user runs /skillsmith distill or needs to chunk source material)
-@{~/.qwen/commands/qwen-skillsmith/tasks/audit.md} (when user runs /skillsmith audit or wants to check skill compliance)
+@{~/.qwen/commands/skillsmith/tasks/discover.md} (when user runs /skillsmith discover or starts discovery)
+@{~/.qwen/commands/skillsmith/tasks/scaffold.md} (when user runs /skillsmith scaffold)
+@{~/.qwen/commands/skillsmith/tasks/distill.md} (when user runs /skillsmith distill or needs to chunk source material)
+@{~/.qwen/commands/skillsmith/tasks/audit.md} (when user runs /skillsmith audit or wants to check skill compliance)
 
 ## Load on Demand
-@{~/.qwen/commands/qwen-skillsmith/specs/entry-point.md} (when referencing entry point conventions)
-@{~/.qwen/commands/qwen-skillsmith/specs/tasks.md} (when referencing task conventions)
-@{~/.qwen/commands/qwen-skillsmith/specs/templates.md} (when referencing template conventions)
-@{~/.qwen/commands/qwen-skillsmith/specs/frameworks.md} (when referencing framework conventions)
-@{~/.qwen/commands/qwen-skillsmith/specs/context.md} (when referencing context conventions)
-@{~/.qwen/commands/qwen-skillsmith/specs/checklists.md} (when referencing checklist conventions)
-@{~/.qwen/commands/qwen-skillsmith/specs/rules.md} (when referencing rules conventions)
+@{~/.qwen/commands/skillsmith/specs/entry-point.md} (when referencing entry point conventions)
+@{~/.qwen/commands/skillsmith/specs/tasks.md} (when referencing task conventions)
+@{~/.qwen/commands/skillsmith/specs/templates.md} (when referencing template conventions)
+@{~/.qwen/commands/skillsmith/specs/frameworks.md} (when referencing framework conventions)
+@{~/.qwen/commands/skillsmith/specs/context.md} (when referencing context conventions)
+@{~/.qwen/commands/skillsmith/specs/checklists.md} (when referencing checklist conventions)
+@{~/.qwen/commands/skillsmith/specs/rules.md} (when referencing rules conventions)
 </routing>
 
 <greeting>

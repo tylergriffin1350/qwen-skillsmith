@@ -13,7 +13,7 @@ As a skill builder, I want my skill spec automatically turned into a working dir
 </when-to-use>
 
 <context>
-@{~/.qwen/commands/qwen-skillsmith/templates/skill-spec.md}
+@{~/.qwen/commands/skillsmith/templates/skill-spec.md}
 </context>
 
 <references>
@@ -23,12 +23,12 @@ As a skill builder, I want my skill spec automatically turned into a working dir
 @../specs/frameworks.md (when generating framework files)
 @../specs/context.md (when generating context files)
 @../specs/checklists.md (when generating checklist files)
-@{~/.qwen/commands/qwen-skillsmith/rules/entry-point-rules.md} (for validation)
-@{~/.qwen/commands/qwen-skillsmith/rules/tasks-rules.md} (for validation)
-@{~/.qwen/commands/qwen-skillsmith/rules/templates-rules.md} (for validation)
-@{~/.qwen/commands/qwen-skillsmith/rules/frameworks-rules.md} (for validation)
-@{~/.qwen/commands/qwen-skillsmith/rules/context-rules.md} (for validation)
-@{~/.qwen/commands/qwen-skillsmith/rules/checklists-rules.md} (for validation)
+@{~/.qwen/commands/skillsmith/rules/entry-point-rules.md} (for validation)
+@{~/.qwen/commands/skillsmith/rules/tasks-rules.md} (for validation)
+@{~/.qwen/commands/skillsmith/rules/templates-rules.md} (for validation)
+@{~/.qwen/commands/skillsmith/rules/frameworks-rules.md} (for validation)
+@{~/.qwen/commands/skillsmith/rules/context-rules.md} (for validation)
+@{~/.qwen/commands/skillsmith/rules/checklists-rules.md} (for validation)
 </references>
 
 <steps>

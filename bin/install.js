@@ -104,7 +104,7 @@ if (hasHelp) {
     npx qwen-skillsmith --local
 
   ${yellow}What gets installed:${reset}
-    ${cyan}commands/qwen-skillsmith/${reset}
+    ${cyan}commands/skillsmith/${reset}
       skillsmith.md        Entry point (meta-skill)
       tasks/               4 task files
       rules/               6 rule files
@@ -119,7 +119,7 @@ function install(isGlobal) {
   const configDir = expandTilde(explicitConfigDir) || expandTilde(process.env.QWEN_CONFIG_DIR);
   const globalDir = configDir || path.join(os.homedir(), '.qwen');
   const qwenDir = isGlobal ? globalDir : path.join(process.cwd(), '.qwen');
-  const smDest = path.join(qwenDir, 'commands', 'qwen-skillsmith');
+  const smDest = path.join(qwenDir, 'commands', 'skillsmith');
 
   // Path prefix for @-reference replacement in .md files
   const pathPrefix = isGlobal ? '~/.qwen/' : './.qwen/';

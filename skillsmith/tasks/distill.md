@@ -13,7 +13,7 @@ As a skill builder, I want to turn raw knowledge sources into structured, skill-
 </when-to-use>
 
 <context>
-@{~/.qwen/commands/qwen-skillsmith/rules/frameworks-rules.md}
+@{~/.qwen/commands/skillsmith/rules/frameworks-rules.md}
 </context>
 
 <references>
@@ -207,7 +207,7 @@ Create `{output-location}/../{source-name}.md` (the parent framework file):
 <step name="validate_output">
 Validate all generated files against framework rules.
 
-1. Load @{~/.qwen/commands/qwen-skillsmith/rules/frameworks-rules.md}
+1. Load @{~/.qwen/commands/skillsmith/rules/frameworks-rules.md}
 2. For each chunk file, verify:
    - [ ] No YAML frontmatter (frameworks are read-only knowledge)
    - [ ] Has Core Concept section (purpose/synthesis)
